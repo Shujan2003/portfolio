@@ -139,7 +139,7 @@ body {
 }
 
 .project-img:hover {
-  transform: scale(1.2); /* increase size on hover */
+  transform: scale(1.1); /* increase size on hover */
   z-index: 2; /* make sure it appears above other elements */
 }
 .project-card {
@@ -149,7 +149,7 @@ body {
 }
 
 .project-card:hover {
-  transform: scale(1.4); /* 1.5 times bigger */
+  transform: scale(1.2); /* 1.5 times bigger */
   z-index: 10; /* appear above other cards */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.895); /* optional shadow for effect */
 }
@@ -197,7 +197,7 @@ body {
 .next-btn { right: 10px; }
 
 .prev-btn:hover, .next-btn:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .prev-btn,
