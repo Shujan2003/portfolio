@@ -212,7 +212,7 @@ export default function Portfolio() {
           <a href="https://github.com/shujan2003" target="_blank" rel="noopener noreferrer">
             <FaGithub size={24} style={{ marginRight: "8px" }} /> GitHub
           </a>
-          <a href="https://linkedin.com/in/shujan" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/shujandv/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={24} style={{ marginRight: "8px" }} /> LinkedIn
           </a>
           <a href="mailto:shujan@example.com">
