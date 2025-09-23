@@ -162,6 +162,38 @@ body {
   transform-origin: top left;
 }
 
+@media (max-width: 768px) {
+  .project-grid {
+    flex-direction: column;      /* stack cards vertically */
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;                  /* use most of the screen width */
+    transform: none;              /* disable hover scale */
+  }
+
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-slider img {
+    max-height: 180px;            /* shorter image */
+    object-fit: contain;          /* keep whole image visible */
+  }
+
+  .prev-btn, .next-btn {
+    left: 5px;
+    right: 5px;
+    padding: 6px 10px;
+  }
+}
+
+
+@media (hover: none) {
+  .project-img:hover { transform: none; }
+}
 
 .image-container {
   overflow: hidden; /* prevents image from overflowing buttons */
