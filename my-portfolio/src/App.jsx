@@ -16,16 +16,16 @@ export default function Portfolio() {
   // Multiple images for each project
   const projectImages = {
     spritebasket: ["/images/Sb3.png", "/images/Sb8.png", "/images/Sb9.png", "/images/Sb10.png"],
-    speakhive: ["/images/speak1.png", "/images/speak2.png"],
+    speakhive: ["/images/sh1.jpeg", "/images/sh2.jpeg","/images/sh3.jpeg","/images/sh4.jpeg","/images/sh5.jpeg"],
     notesapp: [ "/images/Na3.png","/images/Na4.png","/images/Na5.png"],
     clashOfChampions:["/images/CocP2.jpeg","/images/CocP3.jpeg","/images/CocP1.jpeg","/images/Coc5.png","/images/CocP1.jpeg"],
-    speakhive:[""]
+    
   };
 
   // Track current index for each project
   const [slideIndex, setSlideIndex] = useState({
     spritebasket: 0,
-    speakhive: 0,
+    speakhive: 2,
     notesapp: 2,
     clashOfChampions:0,
 
@@ -102,6 +102,7 @@ export default function Portfolio() {
     
               <button className="next-btn" onClick={() => nextSlide("spritebasket")}>➡</button>
             </div>
+            <br></br>
             <h3>SpriteBasket</h3>
             <p>
               A platform where users can upload and download 2D game assets like sprites,
@@ -122,6 +123,7 @@ export default function Portfolio() {
             />
             <button className="next-btn" onClick={() => nextSlide("notesapp")}>➡</button>
           </div>
+          <br></br>
           <h3>NotesApp</h3>
           <p>A note-taking app to manage tasks and reminders efficiently. Built with React Native and Firebase backend.</p>
           <a href="https://github.com/shujan2003/NotesApp" target="_blank">View Project</a>
@@ -130,15 +132,7 @@ export default function Portfolio() {
         {/* mySpeakHive Project */}
 <div className="project-card">
   <div className="project-slider">
-    <div className="image-container">
-      <img
-        src={projectImages.speakhive[slideIndex.speakhive]}
-        alt="mySpeakHive Screenshot"
-        className="project-img"
-      />
-    </div>
-    <div className="slider-buttons">
-      <button
+    <button
         className="prev-btn"
         onClick={(e) => {
           e.stopPropagation();
@@ -147,6 +141,15 @@ export default function Portfolio() {
       >
         ⬅
       </button>
+    <div className="image-container">
+      <img
+        src={projectImages.speakhive[slideIndex.speakhive]}
+        alt="mySpeakHive Screenshot"
+        className="project-img"
+      />
+    </div>
+    <div className="slider-buttons">
+      
       <button
         className="next-btn"
         onClick={(e) => {
@@ -158,10 +161,11 @@ export default function Portfolio() {
       </button>
     </div>
   </div>
+  <br></br>
   <h3>mySpeakHive</h3>
   <p>
-    A voice-based chat application where users can communicate in real time.
-    Built using React Native and Firebase for authentication and messaging.
+    A  chat application where users can communicate in real time.
+    Built using Flutter and Firebase for authentication and messaging.
   </p>
   <a
     href="https://github.com/shujan2003/mySpeakHive"
@@ -184,6 +188,7 @@ export default function Portfolio() {
     />
     <button className="next-btn" onClick={() => nextSlide("clashOfChampions")}>➡</button>
   </div>
+  <br></br>
   <h3>Clash Of Champions</h3>
   <p>
     A 2D fighting game built with Python and Pygame where players compete in rounds to win the match.
