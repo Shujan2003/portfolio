@@ -39,6 +39,24 @@ body {
 .section-dark {
   background-color: #111;
 }
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tools-grid img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.tools-grid img:hover {
+  transform: scale(1.2);
+}
 
 .video-grid {
   display: grid;
