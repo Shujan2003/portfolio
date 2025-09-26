@@ -36,6 +36,30 @@ body {
   text-align: center;
 }
 
+/* === Contact Section Heading Effect === */
+ h2 {
+  font-size: 2rem;
+  color: #d48bff;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 3px #d48bff, 0 0 10px #d48bff; }
+  50% { text-shadow: 0 0 6px #d48bff, 0 0 40px #d48bff; }
+  100% { text-shadow: 0 0 3px #d48bff, 0 0 10px #d48bff; }
+}
+
+ h2:hover {
+  color: #d48bff;
+  animation: glowPulse 1.5s infinite alternate;
+  transform: scale(1.05);
+}
+
+
+
+
 .section-dark {
   background-color: #111;
 }
@@ -129,6 +153,55 @@ body {
   text-decoration: none;
   transition: background 0.3s ease;
 }
+
+.contact-section {
+  text-align: center;
+  padding: 80px 0;
+  background: linear-gradient(180deg, #0d0d0d, #121212);
+  color: #ccc;
+}
+
+.contact-subtext {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px 25px;
+  text-align: center;
+  color: #ccc;
+  width: 130px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(128, 0, 255, 0.2);
+}
+
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(128, 0, 255, 0.6);
+}
+
+.contact-card.github:hover {
+  color: #9b59b6;
+}
+
+.contact-card.linkedin:hover {
+  color: #0a66c2;
+}
+
+.contact-card.email:hover {
+  color: #ff7f50;
+}
+
 
 .contact-links a:hover {
   background: #333;
@@ -254,4 +327,7 @@ body {
 .next-btn {
   position: relative; /* or absolute depending on your layout */
   z-index: 20; /* higher than the image */
+}
+p{
+  color: #ccc;
 }

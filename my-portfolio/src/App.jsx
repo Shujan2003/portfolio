@@ -227,21 +227,30 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section className="section section-dark">
-        <h2>Get In Touch</h2>
-        <p>Email: <a href="mailto:shujan@example.com">shujan@example.com</a></p>
-        <div className="contact-links">
-          <a href="https://github.com/shujan2003" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} style={{ marginRight: "8px" }} /> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/shujandv/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={24} style={{ marginRight: "8px" }} /> LinkedIn
-          </a>
-          <a href="mailto:shujan@example.com">
-            <FaEnvelope size={24} style={{ marginRight: "8px" }} /> Email
-          </a>
-        </div>
-      </section>
+      <section className="section contact-section">
+  <h2> Let’s Connect</h2>
+  <p className="contact-subtext">
+   “Let’s shape ideas into interactive, impactful experiences.”
+  </p>
+  
+  <div className="contact-cards">
+    <a href="https://github.com/shujan2003" target="_blank" rel="noopener noreferrer" className="contact-card github">
+      <FaGithub size={40} />
+      <p>GitHub</p>
+    </a>
+
+    <a href="https://www.linkedin.com/in/shujandv/" target="_blank" rel="noopener noreferrer" className="contact-card linkedin">
+      <FaLinkedin size={40} />
+      <p>LinkedIn</p>
+    </a>
+
+    <a href="mailto:shujan@example.com" className="contact-card email">
+      <FaEnvelope size={40} />
+      <p>Email</p>
+    </a>
+  </div>
+</section>
+
     </div>
   );
 }
