@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "./style.css";
-import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaJava } from "react-icons/fa";
 import { SiFlutter, SiMongodb, SiFirebase, SiCanva, SiBlender } from "react-icons/si";
 
 
@@ -96,7 +96,7 @@ export default function Portfolio() {
   <div><SiFlutter size={40} color="#02569B" /><p>Flutter</p></div>
   <div><SiMongodb size={40} color="#4DB33D" /><p>MongoDB</p></div>
   <div><SiFirebase size={40} color="#FFCA28" /><p>Firebase</p></div>
-  <div><FaPython size={40} color="#3776AB" /><p>Python</p></div>
+  <div><FaJava size={40} color="#3776AB" /><p>Java</p></div>
   <div><SiCanva size={40} color="#00C4CC" /><p>Canva</p></div>
   <div><SiBlender size={40} color="#F5792A" /><p>Blender</p></div>
 </div>
