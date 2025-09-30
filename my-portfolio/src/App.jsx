@@ -14,6 +14,7 @@ import { SiFlutter, SiMongodb, SiFirebase, SiCanva, SiBlender } from "react-icon
 // 3D Model Component
 function HeroModel() {
   const { scene } = useGLTF("/dron.glb"); // Replace with your Blender .glb export
+  
   return <primitive object={scene} scale={1.5} />;
 }
 
@@ -105,6 +106,11 @@ export default function Portfolio() {
       {/* Full Stack Projects Section */}
       <section className="section section-dark">
         <h2>Full Stack Projects</h2>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <div className="project-grid">
           {/* SpriteBasket */}
           <div className="project-card">
@@ -147,77 +153,89 @@ export default function Portfolio() {
         </div>
 
         {/* mySpeakHive Project */}
-<div className="project-card">
-  <div className="project-slider">
-    <button
-        className="prev-btn"
-        onClick={(e) => {
-          e.stopPropagation();
-          prevSlide("speakhive");
-        }}
-      >
-        ⬅
-      </button>
-    <div className="image-container">
-      <img
-        src={projectImages.speakhive[slideIndex.speakhive]}
-        alt="mySpeakHive Screenshot"
-        className="project-img"
-      />
-    </div>
-    <div className="slider-buttons">
+        <div className="project-card">
+            <div className="project-slider">
+               <button
+               className="prev-btn"
+               onClick={(e) => {
+               e.stopPropagation();
+               prevSlide("speakhive");
+                                }
+                        }
+                >
+                ⬅
+               </button>
+               <div className="image-container">
+                <img
+                src={projectImages.speakhive[slideIndex.speakhive]}
+                alt="mySpeakHive Screenshot"
+                className="project-img"
+                />
+            </div>
+        <div className="slider-buttons">
       
-      <button
-        className="next-btn"
-        onClick={(e) => {
-          e.stopPropagation();
-          nextSlide("speakhive");
-        }}
-      >
-        ➡
-      </button>
-    </div>
-  </div>
-  <br></br>
-  <h3>mySpeakHive</h3>
-  <p>
-    A  chat application where users can communicate in real time.
-    Built using Flutter and Firebase for authentication and messaging.
-  </p>
-  <a
-    href="https://github.com/shujan2003/mySpeakHive"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View Project
-  </a>
-</div>
-
-
-           {/* Clash Of Champions */}
-<div className="project-card">
-  <div className="project-slider">
-    <button className="prev-btn" onClick={() => prevSlide("clashOfChampions")}>⬅</button>
-    <img
-      src={projectImages.clashOfChampions[slideIndex.clashOfChampions]}
-      alt="Clash of Champions Screenshot"
-      className="project-img"
-    />
-    <button className="next-btn" onClick={() => nextSlide("clashOfChampions")}>➡</button>
-  </div>
-  <br></br>
-  <h3>Clash Of Champions</h3>
-  <p>
-    A 2D fighting game built with Python and Pygame where players compete in rounds to win the match.
-  </p>
-  <a href="https://github.com/shujan2003/clashOfChapions" target="_blank" rel="noopener noreferrer">View Project</a>
-</div>
-
-        
-
+                <button
+                className="next-btn"
+                onClick={(e) => {
+                e.stopPropagation();
+                nextSlide("speakhive");
+                }}
+                >
+                ➡
+                </button>
+            </div>
+            </div>
+            <br></br>
+            <h3>mySpeakHive</h3>
+            <p>
+            A  chat application where users can communicate in real time.
+            Built using Flutter and Firebase for authentication and messaging.
+          </p>
+          <a
+          href="https://github.com/shujan2003/mySpeakHive"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          View Project
+          </a>
         </div>
-      </section>
+    </div>
+    </section>
 
+        {/*Game projects*/}
+        <section className="section section-dark">
+          <h2>Game Projects</h2>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+          <div className="project-grid">
+            
+      
+             {/* Clash Of Champions */}  
+          <div className="project-card">
+            <div className="project-slider">
+              
+              <button className="prev-btn" onClick={() => prevSlide("clashOfChampions")}>⬅</button>
+              
+                <img
+                src={projectImages.clashOfChampions[slideIndex.clashOfChampions]}
+                alt="Clash of Champions Screenshot"
+                className="project-img"
+                />
+              <button className="next-btn" onClick={() => nextSlide("clashOfChampions")}>➡</button>
+            </div>
+            <br></br>
+              <h3>Clash Of Champions</h3>
+              <p>
+                  A 2D fighting game built with Python and Pygame where players compete in rounds to win the match.
+              </p>
+              <a href="https://github.com/shujan2003/clashOfChapions" target="_blank" rel="noopener noreferrer">View Project</a>
+          
+          </div>
+        </div>
+        </section>
       {/* Animations Section */}
       <section className="section">
         <h2>Blender Animations</h2>
