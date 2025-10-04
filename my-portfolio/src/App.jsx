@@ -1,7 +1,8 @@
-import { Canvas } from "@react-three/fiber";
+import { Canvas,useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import * as THREE from "three";
+import React, { useState ,useRef } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "./style.css";
 import { FaReact, FaNodeJs, FaJava } from "react-icons/fa";
@@ -14,8 +15,34 @@ import { SiFlutter, SiMongodb, SiFirebase, SiCanva, SiBlender } from "react-icon
 // 3D Model Component
 function HeroModel() {
   const { scene } = useGLTF("/dron.glb"); // Replace with your Blender .glb export
-  
-  return <primitive object={scene} scale={1.5} />;
+  const modelRef =useRef();
+  const targetRotation = new THREE.Euler();
+
+    useFrame((state,delta)=>{
+      const t =state.clock.getElapsedTime();
+
+      //Floating
+      modelRef.current.position.y =Math.sin(t *1.5)* 0.1;
+      //Base roatation
+      //modelRef.current.rotation.y += 0.001;
+
+      //Mouse reaction
+      const mouseX =state.mouse.x;
+      const mouseY =state.mouse.y;
+
+      //target rotation
+      targetRotation.x = -mouseY *0.5;
+      targetRotation.y = mouseX *0.5;
+      
+      //Smoothly interpolate to target rotation
+      modelRef.current.rotation.x += (targetRotation.x -modelRef.current.rotation.x) * 0.1;
+      modelRef.current.rotation.y += (targetRotation.y -modelRef.current.rotation.y) * 0.1;
+
+      //  Auto-stabilize (when no mouse movement)
+      targetRotation.x *= 0.98; // slowly reset X
+      targetRotation.y *= 0.98; // slowly reset Y
+    })
+  return <primitive ref={modelRef} object={scene} scale={1.2} />;
 }
 
 export default function Portfolio() {
@@ -60,6 +87,7 @@ export default function Portfolio() {
         <Canvas camera={{ position: [0, 0, 5] }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[2, 2, 2]} />
+          <pointLight position={[0, 2, 2]} intensity={0.5} />
           <HeroModel />
           <OrbitControls enableZoom={false} />
         </Canvas>
