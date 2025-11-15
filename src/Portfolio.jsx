@@ -177,7 +177,13 @@ export default function Portfolio() {
           </div>
           <br></br>
           <h3>NotesApp</h3>
-          <p>A note-taking app to manage tasks and reminders efficiently. Built with React Native and Firebase backend.</p>
+          <br></br>
+           <p>
+  This app allows users to register, log in, add notes, edit notes, delete notes,
+  search notes, and securely store their data in MongoDB. Designed with a clean UI
+  and smooth navigation.
+</p>
+  <br></br>
           <a href="https://github.com/shujan2003/NotesApp" target="_blank">View Project</a>
         </div>
 
