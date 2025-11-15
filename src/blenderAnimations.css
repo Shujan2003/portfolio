@@ -51,8 +51,7 @@
 .video-card {
   background: #141414;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(194, 153, 255, 0.2);
-  border: 1px solid rgba(194, 153, 255, 0.15);
+  
   overflow: hidden;
   width: 300px;
   cursor: pointer;
@@ -61,7 +60,7 @@
 
 .video-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(194, 153, 255, 0.4);
+  box-shadow: 0 0 20px rgb(252, 219, 3);
 }
 
 .video-card video.thumbnail-video {

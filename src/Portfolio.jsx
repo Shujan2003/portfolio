@@ -223,8 +223,7 @@ export default function Portfolio() {
             <br></br>
             <h3>mySpeakHive</h3>
             <p>
-            A  chat application where users can communicate in real time.
-            Built using Flutter and Firebase for authentication and messaging.
+            “SpeakHive is a real-time chat application built using Flutter and Firebase. It features secure user authentication, seamless message syncing, and a responsive UI. Firebase Firestore powers real-time updates, while Firebase Authentication handles secure login and user management.”
           </p>
           <a
           href="https://github.com/shujan2003/mySpeakHive"
