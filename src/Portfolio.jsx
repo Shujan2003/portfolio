@@ -179,7 +179,7 @@ export default function Portfolio() {
           <h3>NotesApp</h3>
           <br></br>
            <p>
-  This app allows users to register, log in, add notes, edit notes, delete notes,
+  This website allows users to register, log in, add notes, edit notes, delete notes,
   search notes, and securely store their data in MongoDB. Designed with a clean UI
   and smooth navigation.
 </p>
