@@ -52,6 +52,7 @@ export default function Portfolio() {
     spritebasket: ["/images/Sb3.png", "/images/Sb8.png", "/images/Sb9.png", "/images/Sb10.png"],
     speakhive: ["/images/sh1.jpeg", "/images/sh2.jpeg","/images/sh3.jpeg","/images/sh4.jpeg","/images/sh5.jpeg"],
     notesapp: [ "/images/Na3.png","/images/Na4.png","/images/Na5.png"],
+    weather:["/images/Wf1.png"],
     clashOfChampions:["/images/CocP2.jpeg","/images/CocP3.jpeg","/images/CocP1.jpeg","/images/Coc5.png","/images/CocP1.jpeg"],
     airborne: ["/images/Abb1.png", "/images/Abb2.png", "/images/Abb3.png","/images/Abb4.png", "/images/Abb5.png", "/images/Abb6.png"  ,"/images/Abb7.png", "/images/Abb8.png"],
   };
@@ -61,6 +62,7 @@ export default function Portfolio() {
     spritebasket: 0,
     speakhive: 2,
     notesapp: 2,
+    weather:0,
     clashOfChampions: 0,
     airborne: 0,
   });
@@ -233,7 +235,41 @@ export default function Portfolio() {
           View Project
           </a>
         </div>
+        {/* WeatherCast App */}
+    <br></br>
+<div className="project-card">
+  <div className="project-slider">
+    <button className="prev-btn" onClick={() => prevSlide("weather")}>⬅</button>
+
+    <img
+      src="/images/Wf1.png" 
+      alt="WeatherCast Screenshot"
+      className="project-img"
+    />
+
+    <button className="next-btn" onClick={() => nextSlide("weather")}>➡</button>
+  </div>
+
+  <br />
+  <h3>WeatherCast</h3>
+  <p>
+    WeatherCast is a full-stack weather forecasting application that provides real-time 
+    temperature, humidity, wind speed, and 3-day forecast visualizations. Built with React, 
+    Node.js, and Express, the app delivers accurate data through a secure backend API and 
+    beautifully visualized charts.
+  </p>
+
+  <a 
+    href="https://github.com/Shujan2003/WeatherForcast" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    View Project
+  </a>
+</div>
     </div>
+    
+
     </section>
 
         {/*Game projects*/}

@@ -89,6 +89,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .project-card {
