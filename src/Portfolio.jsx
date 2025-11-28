@@ -23,7 +23,7 @@ function HeroModel() {
       const t =state.clock.getElapsedTime();
 
       //Floating
-      modelRef.current.position.y =Math.sin(t *1.5)* 0.1;
+      modelRef.current.position.y =Math.sin(t *2)* 0.1;
       //Base roatation
       //modelRef.current.rotation.y += 0.001;
 
@@ -36,8 +36,8 @@ function HeroModel() {
       targetRotation.y = mouseX *0.5;
       
       //Smoothly interpolate to target rotation
-      modelRef.current.rotation.x += (targetRotation.x -modelRef.current.rotation.x) * 0.1;
-      modelRef.current.rotation.y += (targetRotation.y -modelRef.current.rotation.y) * 0.1;
+      modelRef.current.rotation.x += (targetRotation.x -modelRef.current.rotation.x) * 0.25;
+      modelRef.current.rotation.y += (targetRotation.y -modelRef.current.rotation.y) * 0.25;
 
       //  Auto-stabilize (when no mouse movement)
       targetRotation.x *= 0.98; // slowly reset X
@@ -53,7 +53,7 @@ export default function Portfolio() {
     speakhive: ["/images/sh1.jpeg", "/images/sh2.jpeg","/images/sh3.jpeg","/images/sh4.jpeg","/images/sh5.jpeg"],
     notesapp: [ "/images/Na3.png","/images/Na4.png","/images/Na5.png"],
     clashOfChampions:["/images/CocP2.jpeg","/images/CocP3.jpeg","/images/CocP1.jpeg","/images/Coc5.png","/images/CocP1.jpeg"],
-    
+    airborne: ["/images/Abb1.png", "/images/Abb2.png", "/images/Abb3.png","/images/Abb4.png", "/images/Abb5.png", "/images/Abb6.png"  ,"/images/Abb7.png", "/images/Abb8.png"],
   };
 
   // Track current index for each project
@@ -61,8 +61,8 @@ export default function Portfolio() {
     spritebasket: 0,
     speakhive: 2,
     notesapp: 2,
-    clashOfChampions:0,
-
+    clashOfChampions: 0,
+    airborne: 0,
   });
 
   const nextSlide = (project) => {
@@ -86,7 +86,7 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section className="hero-section">
         <Canvas camera={{ position: [0, 0, 5] }}>
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={0.3} />
           <directionalLight position={[2, 2, 2]} />
           <pointLight position={[0, 2, 2]} intensity={0.5} />
           <HeroModel />
@@ -268,16 +268,44 @@ export default function Portfolio() {
               <a href="https://github.com/shujan2003/clashOfChapions" target="_blank" rel="noopener noreferrer">View Project</a>
           
           </div>
+
+          {/* Airborne Bling (new game card) */}
+          <div className="project-card">
+            <div className="project-slider">
+              <button className="prev-btn" onClick={() => prevSlide("airborne")}>
+                ⬅
+              </button>
+              <img src={projectImages.airborne[slideIndex.airborne]} alt="Airborne Bling Screenshot" className="project-img" />
+              <button className="next-btn" onClick={() => nextSlide("airborne")}>
+                ➡
+              </button>
+            </div>
+            <br></br>
+            <h3>Airborne Bling (3D)</h3>
+            <p>
+              A browser-based 3D arcade flying game built with React Three Fiber and Three.js. Collect floating coins, avoid terrain,
+              and race against the clock.
+            </p>
+            <div className="project-links">
+              <a href="https://github.com/Shujan2003/airbornbling" target="_blank" rel="noopener noreferrer">
+                View Code
+              </a>
+              {/* Replace the href below with your live demo URL or route */}
+              <a href="https://airbornbling-murex.vercel.app" target="_blank" rel="noopener noreferrer">
+                Live Demo
+              </a>
+            </div>
+          </div>
         </div>
+      
         </section>
       {/* Animations Section */}
     <section className="section">
-      <h2>Blender Animations</h2>
-      <div className="view-more">
+      <><h2>Blender Animations</h2><div className="view-more">
         <Link to="/animations" className="view-more-btn">
           View All Animations →
         </Link>
-      </div>
+      </div></>
     </section>
 
 
