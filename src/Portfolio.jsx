@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 // 3D Model Component
 function HeroModel() {
-  const { scene } = useGLTF("/dron.glb"); // Replace with your Blender .glb export
+  const { scene } = useGLTF("/dron.glb"); 
   const modelRef =useRef();
   const targetRotation = new THREE.Euler();
 
@@ -86,7 +86,7 @@ export default function Portfolio() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="hero-section">
+      <section id="home" className="hero-section">
         <Canvas camera={{ position: [0, 0, 5] }}>
           <ambientLight intensity={0.3} />
           <directionalLight position={[2, 2, 2]} />
@@ -96,7 +96,7 @@ export default function Portfolio() {
         </Canvas>
         <div className="hero-text">
           <motion.h1
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
@@ -113,7 +113,7 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section className="section">
+      <section id="about" className="section">
         <h2>About Me</h2>
         <p>
           I am an MCA student passionate about full stack development, game development,
@@ -135,7 +135,7 @@ export default function Portfolio() {
       </section>
 
       {/* Full Stack Projects Section */}
-      <section className="section section-dark">
+      <section id="projects" className="section section-dark">
         <h2>Full Stack Projects</h2>
         <br></br>
         <br></br>
@@ -335,18 +335,18 @@ export default function Portfolio() {
         </div>
       
         </section>
-      {/* Animations Section */}
-    <section className="section">
+      {/* Animations Section 
+    <section id="Animations" className="section">
       <><h2>Blender Animations</h2><div className="view-more">
         <Link to="/animations" className="view-more-btn">
           View All Animations →
         </Link>
       </div></>
     </section>
-
+*/}
 
       {/* Contact Section */}
-      <section className="section contact-section">
+      <section id="contact" className="section contact-section">
   <h2> Let’s Connect</h2>
   <p className="contact-subtext">
    “Let’s shape ideas into interactive, impactful experiences.”
