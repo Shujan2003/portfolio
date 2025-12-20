@@ -1,0 +1,106 @@
+/* navbar.css */
+:root {
+  --accent: #d48bff;
+  --muted: rgba(255,255,255,0.85);
+  --bg: rgba(1, 1, 14, 0.6);
+  --glass: rgba(20,18,22,0.6);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(6px);
+  background: var(--bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.042);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.brand-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Nav */
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+/* base link styles */
+.nav a,
+.nav a:link,
+.nav a:focus {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  
+  display: inline-block;
+}
+
+/* Hover */
+.nav a:hover {
+  color: rgb(255, 205, 3);
+  background: rgba(255,255,255,0.03);
+  transform: translateY(-2px);
+}
+
+/* Active (stronger specificity) */
+.nav li > a.active{
+  color: rgb(255, 205, 3);
+  background: #141414;
+  box-shadow: 0 6px 18px rgba(132, 70, 255, 0.06);
+  border: 1px solid rgb(255, 205, 3);
+  transform: translateY(-2px);
+}
+
+
+/* Mobile burger */
+.burger {
+  display: none;
+  width: 44px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+}
+.burger span {
+  display: block;
+  height: 3px;
+  background: var(--muted);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: transform 0.22s, opacity 0.22s;
+}
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Responsive */
+@media (max-width: 880px) {
+  .nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--glass); border-top: 1px solid rgba(255,255,255,0.03); display: none; }
+  .nav.nav-open { display: block; }
+  .nav ul { flex-direction: column; gap: 0; padding: 0.6rem; }
+  .nav li { margin: 6px 0; }
+  .burger { display: flex; }
+}

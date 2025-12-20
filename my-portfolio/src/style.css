@@ -5,6 +5,9 @@ body {
   color: #fff;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 .hero-section {
   position: relative;
   width: 100%;
@@ -82,32 +85,21 @@ body {
   transform: scale(1.2);
 }
 
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
 
-.video-grid iframe {
-  width: 100%;
-  max-width: 400px;
-  height: 225px;
-  border-radius: 12px;
-  border: none;
-}
 
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .project-card {
   background-color: #222;
   padding: 20px;
   border-radius: 12px;
+ 
   width: 280px;
   text-align: left;
 }
@@ -124,6 +116,235 @@ body {
 
 .project-card a:hover {
   text-decoration: underline;
+}
+
+
+
+
+.view-more {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 2px solid #ffb800;
+  color: #ffb800;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 40px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 184, 0, 0.3);
+}
+
+.view-more-btn:hover {
+  background: #ffb800;
+  color: #000;
+  
+  transform: translateY(-3px);
+}
+
+.animations-page {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at top, #0d0d0d, #000);
+  color: #fff;
+  min-height: 100vh;
+  animation: fadeIn 1s ease;
+}
+
+/* Back Button */
+.back-btn-container {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  position: fixed;
+  color: #ffb800;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ffb800;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #ffb800;
+  color: #000;
+  box-shadow: 0 0 1px #ffb800, 0 0 2px #ffb800;
+}
+
+/* Animations Section */
+.animations-page {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: #0b0b0b;
+  text-align: center;
+}
+
+
+.page-title {
+  font-size: 2.5rem;
+  color: #d9a7ff;
+}
+
+.page-subtitle {
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.video-card {
+  background: #141414;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 255, 0.3);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.video-card p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.video-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 85%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blender-animations {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.blender-animations h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffb800;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #c299ff;
+}
+
+.subtitle {
+  color: #bbb;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.video-card {
+  background: #141414;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(194, 153, 255, 0.2);
+  border: 1px solid rgba(194, 153, 255, 0.15);
+}
+.video-card:hover {
+  box-shadow: 0 0 20px rgba(194, 153, 255, 0.4);
+}
+
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.video-card h3 {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin: 0.5rem 0 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.close-btn {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: rgba(255, 182, 255, 0.2);
+  border: 2px solid #f8c52c;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 8px rgba(212, 139, 255, 0.4);
+}
+
+.close-btn:hover {
+  transform: scale(1.15) rotate(10deg);
+  background: #fcd659;
+  color: #000;
+  box-shadow: #f8c52c;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
 }
 
 .contact-links a {
@@ -159,6 +380,7 @@ body {
   padding: 80px 0;
   background: linear-gradient(180deg, #0d0d0d, #121212);
   color: #ccc;
+  min-height: 100vh;
 }
 
 .contact-subtext {
@@ -279,6 +501,38 @@ body {
     right: 5px;
     padding: 6px 10px;
   }
+
+  /* Contact Section Mobile Responsive */
+  .contact-section {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-subtext {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 20px;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
 }
 
 
@@ -307,8 +561,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(38, 38, 38, 0.5);
-  color: white;
+  background: rgba(52, 51, 51, 0.282);
+  color: rgb(252, 204, 83);
   border: none;
   padding: 8px 12px;
   cursor: pointer;
@@ -320,7 +574,8 @@ body {
 .next-btn { right: 10px; }
 
 .prev-btn:hover, .next-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.822);
+  color: rgb(0, 0, 0);
 }
 
 .prev-btn,
