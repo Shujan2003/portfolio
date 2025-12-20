@@ -347,6 +347,7 @@ export default function Portfolio() {
 
       {/* Contact Section */}
       <section id="contact" className="section contact-section">
+        
   <h2> Let’s Connect</h2>
   <p className="contact-subtext">
    “Let’s shape ideas into interactive, impactful experiences.”
